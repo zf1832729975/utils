@@ -1,0 +1,122 @@
+/**
+ * css 个人移动端插件
+ * @author: zhoufei
+ * @date: 2019/5/10
+ */
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/* 列表 开始
+-----------------------*/
+.list {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #fff;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+}
+
+.list p {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #8f8f94;
+}
+
+.list-cell {
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  padding: 11px 15px;
+}
+
+.list-cell p {
+  margin-bottom: 0;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-cell > a:not(.btn) {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: -11px -15px;
+  padding: inherit;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: inherit;
+}
+/*  每一个 li 之后的小横线 */
+.list-cell:after {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  left: 15px;
+  height: 1px;
+  content: "";
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: #c8c7cc;
+}
+.list .list-cell:last-child:after {
+  height: 0;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.list .media-body {
+  overflow: hidden;
+}
+
+/* 是图片的时候 */
+.list .media-object.pull-left {
+  margin-right: 10px;
+}
+.list .media-object.pull-right {
+  margin-left: 10px;
+}
+.list .media-object {
+  line-height: 42px;
+  max-width: 42px;
+  height: 42px;
+}
+.navigate-right:after,
+.push-right:after {
+  right: 15px;
+  content: "\e583";
+}
+
+.navigate-right:after,
+.push-left:after,
+.push-right:after {
+  /* 这里放箭头图标 */
+  /* font-family: Muiicons; */
+  font-size: inherit;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: #bbb;
+  -webkit-font-smoothing: antialiased;
+}

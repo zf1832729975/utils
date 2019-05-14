@@ -1,0 +1,407 @@
+/**
+ * css 个人插件，结合了 bootstrap
+ * @author: zhoufei
+ * @date: 2019/5/10
+ */
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+/* 列表 开始
+-----------------------*/
+.list {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #fff;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+}
+
+.list p {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #8f8f94;
+}
+
+.list-cell {
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  padding: 11px 15px;
+}
+
+.list-cell p {
+  margin-bottom: 0;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-cell > a:not(.btn) {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: -11px -15px;
+  padding: inherit;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: inherit;
+}
+/*  每一个 li 之后的小横线 */
+.list-cell:after {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  left: 15px;
+  height: 1px;
+  content: "";
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: #c8c7cc;
+}
+.list .list-cell:last-child:after {
+  height: 0;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+	float: right;
+}
+.list .media-body {
+  overflow: hidden;
+}
+
+/* 是图片的时候 */
+.list .media-object.pull-left {
+  margin-right: 10px;
+}
+.list .media-object.pull-right {
+	margin-left: 10px;
+} 
+.list .media-object {
+  line-height: 42px;
+  max-width: 42px;
+  height: 42px;
+}
+.navigate-right:after, 
+.push-right:after {
+	right: 15px;
+    content: "\e583";
+}
+
+.navigate-right:after, 
+.push-left:after, 
+.push-right:after {
+	/* 这里放箭头图标 */
+   /* font-family: Muiicons; */
+    font-size: inherit;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #bbb;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 列表 结束、
+------------------------------*/
+
+/* 正常的 - 标准的
+--------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+input {
+	line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+td,
+th {
+	padding: 0;
+}
+
+
+/* 默认项标签开始 - 个人标配项
+ ----------------------------------*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:after,
+:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+a {
+	 color: #337ab7;
+	 text-decoration: none;
+}
+a:focus,
+a:hover {
+	color: #23527c;
+	text-decoration: underline;
+}
+a:focus {
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+img {
+	vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+h2,
+h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+h4,
+h5,
+h6 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 18px;
+}
+h5 {
+	font-size: 14px;
+}
+h6 {
+	font-size: 12px;
+}
+p {
+	margin: 0 0 10px;
+}
+ul {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.small {
+	font-size: 85%;
+}
+/* .text- 文本
+-------------------------------*/
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.text-justify {
+	text-align: justify;
+}
+.text-nowrap {
+	white-space: nowrap;
+}
+.text-muted {
+	color: #777;
+}
+.text-primary {
+	color: #337ab7;
+}
+.text-info {
+	color: #31708f;
+}
+.text-danger {
+	color: #a94442;
+}
+
+/* .bg- 背景
+---------------------------*/
+.bg-primary {
+	color: #fff;
+	background-color: #337ab7;
+}
+.bg-success {
+	background-color: #dff0d8;
+}
+.bg-info {
+	background-color: #d9edf7;
+} 
+.bg-warning {
+	background-color: #fcf8e3;
+}
+ 
+.bg-danger {
+	background-color: #f2dede;
+}
+.list-inline {
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+}
+.list-inline > li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+/* container 适合移动端 */
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+/* 徽章 */
+.badge {
+	display: inline-block;
+	min-width: 10px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-color: #777;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
